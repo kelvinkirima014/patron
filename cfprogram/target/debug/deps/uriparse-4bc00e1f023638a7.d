@@ -1,0 +1,14 @@
+/home/kelvin/crowdfunding/cfprogram/target/debug/deps/uriparse-4bc00e1f023638a7.rmeta: /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/lib.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/utility.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/authority.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/fragment.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/path.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/query.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/relative_reference.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/scheme.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/uri.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/uri_reference.rs
+
+/home/kelvin/crowdfunding/cfprogram/target/debug/deps/uriparse-4bc00e1f023638a7.d: /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/lib.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/utility.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/authority.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/fragment.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/path.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/query.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/relative_reference.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/scheme.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/uri.rs /home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/uri_reference.rs
+
+/home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/lib.rs:
+/home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/utility.rs:
+/home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/authority.rs:
+/home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/fragment.rs:
+/home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/path.rs:
+/home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/query.rs:
+/home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/relative_reference.rs:
+/home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/scheme.rs:
+/home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/uri.rs:
+/home/kelvin/.cargo/registry/src/github.com-1ecc6299db9ec823/uriparse-0.6.4/src/uri_reference.rs:
