@@ -6,6 +6,8 @@ use solana_program::{
     msg,
     program_error::ProgramError,
     pubkey::Pubkey,
+    sysvar::Sysvar,
+    rent::Rent,
 };
 
 /// Define the type of state stored in accounts
@@ -20,9 +22,9 @@ entrypoint!(process_instruction);
 
 // Program entrypoint's implementation
 pub fn process_instruction(
-    program_id: &Pubkey, // Public key of the account the hello world program was loaded into
+    program_id: &Pubkey, // the id of this program on the solana network
     accounts: &[AccountInfo], // The account to say hello to
-    _instruction_data: &[u8], // Ignored, all helloworld instructions are hellos
+    _instruction_data: &[u8], 
 ) -> ProgramResult {
     msg!("Hello World Rust program entrypoint");
 
