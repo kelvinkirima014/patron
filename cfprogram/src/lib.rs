@@ -46,6 +46,12 @@ pub fn process_instruction(
             &instruction_data[1..instruction_data.len()],
         );
         
+    } else if instruction_data[0] == 2 {
+        return donate(
+            program_id,
+            accounts,
+            &instruction_data[1..instruction_data.len()],
+        );
     }
 
 
@@ -66,6 +72,16 @@ fn create_campaign(
 }
 
 fn withdraw(
+    program_id: &Pubkey,
+    accounts: &[AccountInfo],
+    instruction_data: &[u8],
+) -> ProgramResult {
+
+    Ok(())
+
+}
+
+fn donate(
     program_id: &Pubkey,
     accounts: &[AccountInfo],
     instruction_data: &[u8],
