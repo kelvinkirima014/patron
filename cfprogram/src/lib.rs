@@ -39,6 +39,13 @@ pub fn process_instruction(
             accounts,
             &instruction_data[1..instruction_data.len()],
         );
+    } else if instruction_data[0] == 1 {
+        return withdraw(
+            program_id,
+            accounts,
+            &instruction_data[1..instruction_data.len()],
+        );
+        
     }
 
 
@@ -49,6 +56,16 @@ pub fn process_instruction(
 
 
 fn create_campaign(
+    program_id: &Pubkey,
+    accounts: &[AccountInfo],
+    instruction_data: &[u8],
+) -> ProgramResult {
+
+    Ok(())
+
+}
+
+fn withdraw(
     program_id: &Pubkey,
     accounts: &[AccountInfo],
     instruction_data: &[u8],
