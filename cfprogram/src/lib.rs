@@ -34,8 +34,28 @@ pub fn process_instruction(
     } 
 
     if instruction_data[0] == 0 {
-
+        return create_campaign(
+            program_id,
+            accounts,
+            &instruction_data[1..instruction_data.len()],
+        );
     }
+
+
+    msg!("Didn't find the entrypoint required");
+    Err(ProgramError::InvalidInstructionData)
+}
+
+
+
+fn create_campaign(
+    program_id: &Pubkey,
+    accounts: &[AccountInfo],
+    instruction_data: &[u8],
+) -> ProgramResult {
+
+    Ok(())
+
 }
 
 
