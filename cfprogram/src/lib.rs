@@ -24,9 +24,14 @@ entrypoint!(process_instruction);
 pub fn process_instruction(
     program_id: &Pubkey, // the id of this program on the solana network
     accounts: &[AccountInfo], // The account to say hello to
-    _instruction_data: &[u8], 
+    _instruction_data: &[u8],  // This is the data we want to process our instruction for
 ) -> ProgramResult {
-    msg!("Hello World Rust program entrypoint");
+    
+    if instruction_data.len() == 0 {
+        Err(ProgramError::InvalidInstruction)
+    }
+
+    
 
     // Iterating accounts is safer then indexing
     let accounts_iter = &mut accounts.iter();
