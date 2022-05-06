@@ -24,14 +24,22 @@ entrypoint!(process_instruction);
 pub fn process_instruction(
     program_id: &Pubkey, // the id of this program on the solana network
     accounts: &[AccountInfo], // The account to say hello to
-    _instruction_data: &[u8],  // This is the data we want to process our instruction for
+    instruction_data: &[u8],  // This is the data we want to process our instruction for
 ) -> ProgramResult {
     
     if instruction_data.len() == 0 {
-        Err(ProgramError::InvalidInstruction)
+        Err(ProgramError::InvalidInstructionData)
     }
 
-    
+    if instruction_data[0] == 0 {
+        create_campaign(
+            program_id,
+            accounts,
+            &instruction_data[1..instruction_data.len()],
+        )
+    } else if 
+
+
 
     // Iterating accounts is safer then indexing
     let accounts_iter = &mut accounts.iter();
