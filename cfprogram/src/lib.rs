@@ -14,9 +14,13 @@ use solana_program::{
 
 /// Define the type of state stored in accounts
 #[derive(BorshSerialize, BorshDeserialize, Debug)]
-pub struct GreetingAccount {
-    /// number of greetings
-    pub counter: u32,
+pub struct CampaignDetails {
+    
+    pub admin: Pubkey,
+    pub name: String,
+    pub description: String,
+    pub image_link: String,
+    pub amount_donated: u64,
 }
 
 // Declare and export the program's entrypoint
