@@ -23,6 +23,11 @@ pub struct CampaignDetails {
     pub amount_donated: u64,
 }
 
+#[derive(BorshSerialize, BorshDeserialize, Debug)]
+struct WithdrawRequest {
+    pub amount: u64,
+}
+
 // Declare and export the program's entrypoint
 entrypoint!(process_instruction);
 
