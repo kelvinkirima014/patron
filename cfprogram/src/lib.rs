@@ -85,7 +85,13 @@ fn create_campaign(
         msg!("Creator account should be signer");
         return Err(ProgramError::IncorrectProgramId);
     }
-
+   
+    //make sure write is owned by solana program account
+    if writing_account.owner != program_id{
+        msg!("Write account should be owned by solana program account");
+        return Err(ProgramError::IncorrectProgramId);
+    }
+    
     
 
 
