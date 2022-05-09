@@ -92,6 +92,14 @@ fn create_campaign(
         return Err(ProgramError::IncorrectProgramId);
     }
     
+    let mut input_data = CampaignDetails::try_from_slice(&instruction_data)
+       .expect("Instruction data serialization failed");
+
+    //only creator should be admin
+    if input_data.admin != *creator_account.key{
+        msg!("Invalid instruction data");
+        return Err(ProgramError::InvalidInstructionData);
+    }
     
 
 
