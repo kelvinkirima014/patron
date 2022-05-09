@@ -80,9 +80,13 @@ fn create_campaign(
     //account of the person creating campaign
     let creator_account = next_account_info(accounts_iter)?;
 
+    //makes sure allowed transaction is allowed by creator
+    if !creator_account.is_signer{
+        msg!("Creator account should be signer");
+        return Err(ProgramError::IncorrectProgramId);
+    }
+
     
-
-
 
 
     Ok(())
