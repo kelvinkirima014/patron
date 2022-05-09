@@ -9,7 +9,7 @@ use solana_program::{
     program_error::ProgramError,
     pubkey::Pubkey,
     sysvar::Sysvar,
-    rent::Rent,
+    rent::{Rent, self},
 };
 
 /// Define the type of state stored in accounts
@@ -160,6 +160,8 @@ fn withdraw(
     let input_data = WithdrawRequest::try_from_slice(&instruction_data)
         .expect("Instruction data serialization failed");
 
+    let rent_exemption = Rent::get()?
+        .minimum_balance(writing_account.data_len());
     Ok(())
 
 }
