@@ -150,7 +150,15 @@ fn withdraw(
 
     let campaign_data = CampaignDetails::try_from_slice(
         *writing_account.data.borrow()).expect("Error deserializing data");
+    
+    if campaign_data.admin != *admin_account.key{
+        msg!("Only admin can withdraw");
+        return Err(ProgramError::InvalidAccountData);
+        
+    }
 
+    let input_data = WithdrawRequest::try_from_slice(&instruction_data)
+        .expect("Instruction data serialization failed");
 
     Ok(())
 
