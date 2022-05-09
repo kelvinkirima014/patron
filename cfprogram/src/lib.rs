@@ -103,7 +103,14 @@ fn create_campaign(
     
    //minimum balance needded in program account 
    let rent_exemption = Rent::get()?.minimum_balance(writing_account.data_len());
-   
+   //make sure we have that much lamports
+   if **writing_account.lamports.borrow() < rent_exemption{
+        msg!("Balance should exceed rent_exemption");
+        return Err(ProgramError::InsufficientFunds);
+   }
+
+   //set initial amount to donate as 0
+   input_data.amount_donated = 0;
    
     Ok(())
 
