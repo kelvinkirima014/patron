@@ -132,6 +132,22 @@ fn withdraw(
     let accounts_iter = &mut accounts.iter();
     let writing_account = next_account_info(accounts_iter)?;
     let admin_account = next_account_info(accounts_iter)?;
+    
+    //checks
+    if writing_account.owner != program_id{
+        msg!("writing_account isn't owned by program");
+        return Err(ProgramError::IncorrectProgramId);
+    }
+
+    if writing_account.owner != program_id{
+        msg!("writing_account isn't owned by program");
+    }
+
+    if !admin_account.is_signer{
+        msg!("admin should be signer");
+        return Err(ProgramError::IncorrectProgramId);
+    }
+
 
     Ok(())
 
