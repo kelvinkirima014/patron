@@ -148,6 +148,9 @@ fn withdraw(
         return Err(ProgramError::IncorrectProgramId);
     }
 
+    let campaign_data = CampaignDetails::try_from_slice(
+        *writing_account.data.borrow()).expect("Error deserializing data");
+
 
     Ok(())
 
