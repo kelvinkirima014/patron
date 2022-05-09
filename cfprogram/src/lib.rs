@@ -101,8 +101,10 @@ fn create_campaign(
         return Err(ProgramError::InvalidInstructionData);
     }
     
-
-
+   //minimum balance needded in program account 
+   let rent_exemption = Rent::get()?.minimum_balance(writing_account.data_len());
+   
+   
     Ok(())
 
 }
