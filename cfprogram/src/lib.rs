@@ -70,7 +70,8 @@ fn create_campaign(
     accounts: &[AccountInfo],
     instruction_data: &[u8],
 ) -> ProgramResult {
-    //iterator on accounts
+    //iterator on an array of accounts
+    //related to this entrypoint
     let accounts_iter = &mut accounts.iter();
 
     Ok(())
