@@ -111,6 +111,8 @@ fn create_campaign(
 
    //set initial amount to donate as 0
    input_data.amount_donated = 0;
+
+   input_data.serialize(&mut &mut writing_account.data.borrow_mut()[..]);
    
     Ok(())
 
