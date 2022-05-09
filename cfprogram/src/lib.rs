@@ -76,6 +76,10 @@ fn create_campaign(
     
     //account to write data to
     let writing_account = next_account_info(accounts_iter)?;
+
+    //account of the person creating campaign
+    let creator_account = next_account_info(accounts_iter)?;
+
     
 
 
