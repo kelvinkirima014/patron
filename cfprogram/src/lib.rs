@@ -73,6 +73,13 @@ fn create_campaign(
     //iterator on an array of accounts
     //related to this entrypoint
     let accounts_iter = &mut accounts.iter();
+    
+    //account to write data to
+    let writing_account = next_account_info(accounts_iter)?;
+    
+
+
+
 
     Ok(())
 
