@@ -129,6 +129,10 @@ fn withdraw(
     instruction_data: &[u8],
 ) -> ProgramResult {
 
+    let accounts_iter = &mut accounts.iter();
+    let writing_account = next_account_info(accounts_iter)?;
+    let admin_account = next_account_info(accounts_iter)?;
+
     Ok(())
 
 }
