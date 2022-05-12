@@ -210,6 +210,9 @@ fn donate(
         
     campaign_data.amount_donated += **donator_program_account.lamports.borrow();
 
+    **writing_account.try_borrow_mut_lamports()? += **donator_program_account.lamports.borrow();
+    **donator_program_account.try_borrow_mut_lamports()? += 0;
+
 
     Ok(())
 
