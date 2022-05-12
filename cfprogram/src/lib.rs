@@ -192,6 +192,20 @@ fn donate(
     let donator_program_account = next_account_info(accounts_iter)?;
     let donator = next_account_info(accounts_iter)?;
 
+    if writing_account.owner != program_id{
+        msg!("Writing account must be owned by program");
+        return Err(ProgramError::IncorrectProgramId);
+    }
+    if donator_program_account.owner != program_id{
+        msg!("Donator account must be owned by program");
+        return Err(ProgramError::IncorrectProgramId);
+    }
+    if !donator.is_signer{
+        msg!("Donator must be signer");
+        return Err(ProgramError::IncorrectProgramId);
+    }
+
+
     Ok(())
 
 }
