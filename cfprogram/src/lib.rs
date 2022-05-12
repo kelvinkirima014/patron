@@ -9,7 +9,7 @@ use solana_program::{
     program_error::ProgramError,
     pubkey::Pubkey,
     sysvar::Sysvar,
-    rent::{Rent, self},
+    rent::{Rent},
 };
 
 /// Define the type of state stored in accounts
