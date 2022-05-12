@@ -187,6 +187,11 @@ fn donate(
     instruction_data: &[u8],
 ) -> ProgramResult {
 
+    let accounts_iter = &mut accounts.iter();
+    let writing_account = next_account_info(accounts_iter)?;
+    let donator_program_account = next_account_info(accounts_iter)?;
+    let donator = next_account_info(accounts_iter)?;
+
     Ok(())
 
 }
