@@ -205,6 +205,11 @@ fn donate(
         return Err(ProgramError::IncorrectProgramId);
     }
 
+    let mut campaign_data = CampaignDetails::try_from_slice(*writing_account.data.borrow())
+        .expect("Error deserializing data");
+        
+    campaign_data.amount_donated += **donator_program_account.lamports.borrow();
+
 
     Ok(())
 
