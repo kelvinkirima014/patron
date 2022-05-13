@@ -76,3 +76,10 @@ async function checkWallet() {
 			await wallet.connect();
 		}
 }
+
+const SEED = "abcdef" + Math.random().toString();
+    let newAccount = await PublicKey.createWithSeed(
+        wallet.publicKey,
+        SEED,
+        programId
+    );
