@@ -26,3 +26,19 @@ export async function setPayerAndBlockhashTransaction(instructions){
 	transaction.recentBlockhash = hash.blockhash;
 	return transaction;
 }
+
+export async function signAndSendTransaction(transaction){
+	try{
+		console.log("signAndSendTransaction");
+		let signedTransaction = await wallet.signTransaction(transaction);
+		console.log("signed transaction");
+		let signature = await connection.sendRawTransaction(
+			signedTransaction.serialize()
+		);
+		console.log("end sign and send transaction");
+		return signature;
+	} catch(e){
+		console.log("failure signing and sending transaction"), e;
+		throw e;
+	}
+}
