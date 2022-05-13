@@ -63,3 +63,16 @@ class CampaignDetails{
 			}	
 		]]);	
 }
+
+export async function createCampaign(
+	name, description, image_link
+){
+	await checkWallet();
+
+}
+
+async function checkWallet() {
+		if (!wallet.connected()){
+			await wallet.connect();
+		}
+}
