@@ -83,3 +83,11 @@ const SEED = "abcdef" + Math.random().toString();
         SEED,
         programId
     );
+
+let campaign =new CampaignDetails({
+        name: name,
+        description: description,
+        image_link: image_link,
+        admin: wallet.publicKey.toBuffer(),
+        amount_donated: 0
+    })
