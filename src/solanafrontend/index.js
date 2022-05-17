@@ -85,7 +85,7 @@ const SEED = "abcdef" + Math.random().toString();
     );
 
 let campaign =new CampaignDetails({
-        name: name,
+        name: String,
         description: description,
         image_link: image_link,
         admin: wallet.publicKey.toBuffer(),
