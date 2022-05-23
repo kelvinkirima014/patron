@@ -89,5 +89,5 @@ let campaign =new CampaignDetails({
         description: description,
         image_link: image_link,
         admin: wallet.publicKey.toBuffer(),
-        amount_donated: 0
+        amount_donated: 0,
     })
