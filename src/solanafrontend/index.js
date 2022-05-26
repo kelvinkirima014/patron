@@ -22,7 +22,7 @@ export async function setPayerAndBlockhashTransaction(instructions){
 	});
 
 	transaction.feePayer = wallet.publicKey;
-	let hash = await connection.getLatestBlockhash();
+	let hash = await connection.getLatestBlockhash()
 	transaction.recentBlockhash = hash.blockhash;
 	return transaction;
 }
