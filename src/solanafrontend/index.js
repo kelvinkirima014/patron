@@ -18,7 +18,7 @@ const programId = new PublicKey(
 export async function setPayerAndBlockhashTransaction(instructions){
 	const transaction = new Transaction();
 	instructions.forEach(element => {
-		transaction.add(element);
+		transaction.add(element)
 	});
 
 	transaction.feePayer = wallet.publicKey;
